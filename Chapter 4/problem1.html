@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Form</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #fffaf0;
+      padding: 40px 20px;
+      color: #3a2e1e;
+    }
+
+    form {
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff6dd;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    }
+
+    form > div {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 10px 14px;
+      font-size: 1rem;
+      border: 1px solid #d4af37;
+      border-radius: 8px;
+      background-color: #fff;
+      color: #3a2e1e;
+      transition: 0.3s border ease;
+    }
+
+    input:focus,
+    select:focus {
+      outline: none;
+      border-color: #c59e0d;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .col {
+      flex: 1 1 45%;
+      min-width: 220px;
+    }
+
+    .submit-button {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .submit-button button {
+      background-color: #ffd700;
+      color: #3a2e1e;
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-button button:hover {
+      background-color: #e6c200;
+    }
+
+    @media (max-width: 600px) {
+      .col {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form action="submit.php">
+
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter Name" required>
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter Email" required>
+    </div>
+
+    <div>
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone"
+             placeholder="Phone No." 
+             maxlength="10" 
+             pattern="[0-9]{10}" 
+             title="Enter a 10-digit phone number"
+             required>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label for="fromPlace">From</label>
+        <select id="fromPlace" name="from">
+          <option value="" disabled selected>Select a Place</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Jaipur">Jaipur</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Chennai">Chennai</option>
+        </select>
+      </div>
+
+      <div class="col">
+        <label for="toPlace">To</label>
+        <select id="toPlace" name="to">
+          <option value="" disabled selected>Select a Place</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Jaipur">Jaipur</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Chennai">Chennai</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label for="adults">Adults</label>
+        <select id="adults" name="adults">
+          <option value="" disabled selected>Select Number</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <div class="col">
+        <label for="children">Children</label>
+        <select id="children" name="children">
+          <option value="" disabled selected>Select Number</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+    </div>
+
+    <div>
+      <label for="package">Package</label>
+      <select id="package" name="package">
+        <option value="" disabled selected>Select Package</option>
+        <option value="Economy">Economy</option>
+        <option value="Premium">Premium</option>
+        <option value="VIP">VIP</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label for="travelDate">Departure On</label>
+        <input type="date" id="travelDate" name="travelDate" required>
+      </div>
+
+      <div class="col">
+        <label for="journeyType">Journey Type</label>
+        <select id="journeyType" name="journeyType">
+          <option value="" disabled selected>Select Journey Type</option>
+          <option value="One-way">One Way</option>
+          <option value="Return">Return</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="submit-button">
+      <button type="submit">Submit</button>
+    </div>
+
+  </form>
+
+</body>
+</html>

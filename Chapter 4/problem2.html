@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Match Scores</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #dbe6f6, #c5796d);
+      padding: 40px 20px;
+      color: #2c3e50;
+    }
+
+    table {
+      width: 100%;
+      max-width: 900px;
+      margin: auto;
+      border-collapse: collapse;
+      border-radius: 20px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      transition: 0.3s ease;
+    }
+
+    caption {
+      caption-side: top;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #1f2c46;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    thead {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      text-transform: uppercase;
+      font-size: 1rem;
+    }
+
+    th, td {
+      padding: 1.1rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    td:first-child {
+      font-weight: 600;
+      color: #34495e;
+      background-color: #f4f6fb;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f9fbff;
+    }
+
+    tbody tr:hover {
+      background-color: #e1edff;
+      transform: scale(1.005);
+      transition: 0.2s ease-in-out;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    td[rowspan], td[colspan] {
+      font-weight: bold;
+      background-color: #e0f0ff;
+      color: #2c3e50;
+    }
+
+    @media (max-width: 768px) {
+      table, thead, tbody, tr, th, td {
+        display: block;
+        width: 100%;
+      }
+
+      thead {
+        display: none;
+      }
+
+      caption {
+        font-size: 1.6rem;
+      }
+
+      tr {
+        margin-bottom: 1.2rem;
+        border-radius: 12px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      }
+
+      td {
+        text-align: right;
+        padding: 0.9rem 1.2rem;
+        position: relative;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        font-weight: 600;
+        color: #333;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <table>
+    <caption>IPL Team Match Scores</caption>
+    <thead>
+      <tr>
+        <th rowspan="2">Team</th>
+        <th colspan="4">Match Number</th>
+      </tr>
+      <tr>
+        <th>I</th> <th>II</th> <th>III</th> <th>Iv</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Team">KKR</td>
+        <td data-label="Match 1">111</td>
+        <td data-label="Match 2">142</td>
+        <td data-label="Match 3">106</td>
+        <td data-label="Match 4">176</td>
+      </tr>
+      <tr>
+        <td data-label="Team">CSK</td>
+        <td data-label="Match 1">89</td>
+        <td data-label="Match 2">115</td>
+        <td data-label="Match 3">121</td>
+        <td data-label="Match 4">132</td>
+      </tr>
+      <tr>
+        <td data-label="Team">MI</td>
+        <td data-label="Match 1">86</td>
+        <td data-label="Match 2">76</td>
+        <td data-label="Match 3">120</td>
+        <td data-label="Match 4">98</td>
+      </tr>
+      <tr>
+        <td data-label="Team">Kings XII</td>
+        <td data-label="Match 1">85</td>
+        <td data-label="Match 2">94</td>
+        <td data-label="Match 3">103</td>
+        <td data-label="Match 4">76</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
