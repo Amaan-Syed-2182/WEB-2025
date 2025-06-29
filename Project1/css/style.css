@@ -1,0 +1,190 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #ff2e2e;
+  color: white;
+}
+
+.logo img {
+  height: 50px;
+  border-radius: 10px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header ul li a:hover {
+  color: #ffd6d6;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url('../img/main.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 15px;
+  color: #fff;
+  width: 80%;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero input {
+  padding: 16px 24px;
+  width: 100%;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero input:focus {
+  outline: none;
+  box-shadow: 0 0 12px #ff2e2e;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.features span {
+  background-color: #ff2e2e;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 500;
+}
+
+/* Why & Achievements */
+.why-achievements {
+  padding: 50px 20px;
+  background-color: #fff4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.why-choose, .achievements {
+  flex: 1;
+  min-width: 300px;
+}
+
+.why-choose h2, .achievements h2 {
+  color: #ff2e2e;
+  margin-bottom: 20px;
+}
+
+.why-choose ul {
+  list-style: none;
+  padding-left: 20px;
+  color: #333;
+}
+
+.why-choose ul li {
+  margin-bottom: 12px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.stat h3 {
+  font-size: 24px;
+  color: #ff2e2e;
+}
+
+.stat p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #ff2e2e;
+  color: white;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero input {
+    font-size: 16px;
+  }
+
+  .features span {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}

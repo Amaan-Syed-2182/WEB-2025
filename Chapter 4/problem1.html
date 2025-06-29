@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +29,7 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
     }
 
-    form > div {
+    form>div {
       margin-bottom: 20px;
     }
 
@@ -75,6 +76,17 @@
       margin-top: 30px;
     }
 
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #3a2e1e;
+      font-size: 2.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+
     .submit-button button {
       background-color: #ffd700;
       color: #3a2e1e;
@@ -98,8 +110,9 @@
     }
   </style>
 </head>
-<body>
 
+<body>
+  <h1>Travel Form</h1>
   <form action="submit.php">
 
     <div>
@@ -114,12 +127,8 @@
 
     <div>
       <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone"
-             placeholder="Phone No." 
-             maxlength="10" 
-             pattern="[0-9]{10}" 
-             title="Enter a 10-digit phone number"
-             required>
+      <input type="tel" id="phone" name="phone" placeholder="Phone No." maxlength="10" pattern="[0-9]{10}"
+        title="Enter a 10-digit phone number" required>
     </div>
 
     <div class="row">
@@ -207,4 +216,5 @@
   </form>
 
 </body>
+
 </html>

@@ -1,0 +1,29 @@
+
+
+.Box1{
+    border: 1px solid;
+    border-radius: 5px;
+    height: 300px;
+    width: 300px;
+    background-color: aqua;
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 5% ;
+
+}
+
+.Box2{
+    border: 1px solid;
+    border-radius: 5px;
+    height: 100px;
+    width: 100px;
+    background-color: tomato;
+    
+    top: 100px;
+    left: 100px;
+    position: relative;
+
+
+
+}

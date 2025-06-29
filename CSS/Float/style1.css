@@ -1,0 +1,28 @@
+.box{
+    border: 5px solid;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(247, 235, 220);
+    padding: 10px;
+
+    margin: 1%;
+    height: 100px;
+    width: 100px;
+    color: gold;
+    font-size: 40px;
+    
+    
+
+    float: right;
+}
+
+p{
+    font-size: 22px;
+    margin: 30px;
+    font-family: sans-serif;
+    font-style: oblique;
+    color: lightslategray;
+    clear: both;
+
+}
